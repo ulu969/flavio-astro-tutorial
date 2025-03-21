@@ -1,0 +1,17 @@
+---
+import type { GetStaticPaths } from 'astro';
+import Layout from '../layouts/Layout.astro';
+const { post } = Astro.params;
+
+export async function getStaticPaths() {
+  return [
+    { params: { post: 'test' } },
+    { params: { post: 'test1' } },
+    { params: { post: 'test2' } },
+  ];
+}
+---
+
+<Layout title="Post">
+  <h1>{post}</h1>
+</Layout>

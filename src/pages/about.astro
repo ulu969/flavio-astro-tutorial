@@ -1,0 +1,11 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+import olgaImage from '../images/olga.jpg';
+---
+
+<Layout>
+  <p>Jimmy is about</p>
+  <a href="/">Home Page</a>
+  <Image src={olgaImage} alt="Image of Olga" />
+</Layout>
